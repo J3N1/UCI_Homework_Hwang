@@ -1,1 +1,1 @@
-# UCI_Homework_Hwang
+# Contains the homework for UCI Data Analytics 2020-2021
