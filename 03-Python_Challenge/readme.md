@@ -16,8 +16,8 @@
 
 ## Files
 + The following are .txt files that show the results of each of the scripts:
-  - [Budget Data](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyBank/Analysis/budget_data.txt)
-  - [Election Data](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyPoll/Analysis/election_data.txt)
+  - [Financial Analysis](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyBank/Analysis/budget_data.txt)
+  - [Election Results](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyPoll/Analysis/election_data.txt)
 + The following are the Python Scripts used to produce the above text files and results:
   - [PyBank Script](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyBank/main.py)
   - [PyPoll Script](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/03-Python_Challenge/PyPoll/main.py)
