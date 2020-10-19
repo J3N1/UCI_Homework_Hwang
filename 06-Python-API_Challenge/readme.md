@@ -16,7 +16,7 @@
   - [Southern Hemisphere - Wind Speed vs. Latitude](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/06-Python-API_Challenge/Images/Wind%20Speed%20vs%20Latitude%20Southern%20Hemp.png)<br>
 # Part II - VacationPy
 + Used the Pandas Library, Jupyter Notebook, and the Google Maps API to aggregate data to :<br>
-  - Create a Heatmap based on the Humidity of every city accumulated from Part I[Humidity Heat Map](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/06-Python-API_Challenge/Images/heatmap.png)<br>
+  - Create a Heatmap based on the Humidity of every city accumulated from Part I [Humidity Heat Map](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/06-Python-API_Challenge/Images/heatmap.png)<br>
   - Plot the hotels on top of the humidity heatmap with each pin containing the Hotel Name, City, and Country [Hotel Map](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/06-Python-API_Challenge/Images/hotelmap.PNG)<br>
 ## Files
 + The jupyter notebook files that were used to create all the images and analysis: 
