@@ -1,7 +1,7 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
-
+--Create the departments table
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(4)   NOT NULL,
     "dept_name" VARCHAR(255)   NOT NULL,
@@ -10,16 +10,19 @@ CREATE TABLE "departments" (
      )
 );
 
+--Create the dept_emp table
 CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR(4)   NOT NULL
 );
 
+--Create the dept_manager table
 CREATE TABLE "dept_manager" (
     "dept_no" VARCHAR(4)   NOT NULL,
     "emp_no" INT   NOT NULL
 );
 
+--Create the employees table
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "title_id" VARCHAR(10)   NOT NULL,
@@ -33,11 +36,13 @@ CREATE TABLE "employees" (
      )
 );
 
+--Create the salaries table
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL
 );
 
+--Create the titles table
 CREATE TABLE "titles" (
     "title_id" VARCHAR(10)   NOT NULL,
     "title" VARCHAR(255)   NOT NULL,
@@ -46,6 +51,7 @@ CREATE TABLE "titles" (
      )
 );
 
+--Assign Foreign Keys to the associated tables 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
@@ -64,3 +70,10 @@ REFERENCES "titles" ("title_id");
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
+--To view the tables after importing the data in
+SELECT * FROM "departments"
+SELECT * FROM "dept_emp"
+SELECT * FROM "dept_manager"
+SELECT * FROM "employees"
+SELECT * FROM "salaries"
+SELECT * FROM "titles"

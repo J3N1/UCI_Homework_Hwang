@@ -5,3 +5,5 @@
 __pycache__
 # ignore api_keys
 api_keys.py
+# ignore config
+config.py
