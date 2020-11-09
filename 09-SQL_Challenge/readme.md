@@ -20,5 +20,5 @@
   - In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.<br>
 ## Bonus
 + Imported the SQL database into the [Bonus Analysis](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/09-SQL_Challenge/EmployeeSQL/Bonus_Analysis.ipynb) jupyter notebook file<br>
-+ Created a histogram to visualize the [most common salary ranges](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/09-SQL_Challenge/EmployeeSQL/Common%20Salary%20Ranges.png)<br>
-+ Created a bar chart of [average salary by title](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/09-SQL_Challenge/EmployeeSQL/Average%20Salary%20By%20Title.png)<br>
++ Created a histogram to visualize the [most common salary ranges](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/09-SQL_Challenge/EmployeeSQL/CommonSalaryRanges.png)<br>
++ Created a bar chart of [average salary by title](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/09-SQL_Challenge/EmployeeSQL/AverageSalaryByTitle.png)<br>
