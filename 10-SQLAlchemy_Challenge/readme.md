@@ -1,19 +1,28 @@
 # SQLAlchemy Homework - Surfs Up
 ## Background
 ### Step 1 - Climate Analysis and Exploration
-+ Used Python and SQLAlchemy to do data analysis and data exploration of the climate database provided to show:<br>
++ Used Python and SQLAlchemy to do a data analysis and data exploration of the climate database provided in a [jupyter notebook](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/climate_starter.ipynb) file to show:<br>
   - Precipitation Analysis<br>
+    + Created a query to retrieve the last 12 months of precipitation data to show only the date and precipitation data values<br>
+    + Loaded the query results into a Pandas DataFrame and set the index to the date column<br>
+    + Plotted the the [results](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/Images/prcp_analysis.png) using the DataFrame plot method<br>
   - Station Analysis<br>
+    + Created a query to calculate the total number of stations<br>
+    + Created a query to find the most active stations:<br>
+      - by listing the stations in descending order<br>
+      - found the minimum, maximum, average, and count of the station<br>
+      - found the station with the highest number of observations<br>
+    + Created a query to retrieve the last 12 months of temperature observation data(TOBS)<br>
+      - filtered the results to find the station with the highest number of observations<br>
+      - Plotted the the [results](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/Images/tobs_histogram.png) using the DataFrame plot method<br>
 ### Step 2 - Climate App
-+ Designed a Flask API based on the queries developed:<br>
-  - <br>
-  - <br>
-  - <br>
-  - <br>
-  - <br>
-  - <br>
-  - <br>
-  - <br>
++ Designed a [Flask API](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/app.py) based on the queries developed with the following routes:<br>
+  - / : home page which shows all the available api routes<br>
+  - /api/v1.0/precipitation : shows a JSON dictionary of the precipitation dates and data <br>
+  - /api/v1.0/stations : shows a JSON list of the stations from the dataset <br>
+  - /api/v1.0/tobs : shows a JSON list of temperature observations for the previous years <br>
+  - /api/v1.0/<start> : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a given start date<br>
+  - /api/v1.0/<start>/<end> : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature between two dates<br>
 ## Bonus
 + <br>
 + <br>
