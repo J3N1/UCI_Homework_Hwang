@@ -21,8 +21,8 @@
   - /api/v1.0/precipitation : shows a JSON dictionary of the precipitation dates and data <br>
   - /api/v1.0/stations : shows a JSON list of the stations from the dataset <br>
   - /api/v1.0/tobs : shows a JSON list of temperature observations for the previous years <br>
-  - /api/v1.0/<yyyy-mm-dd> : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a given start date<br>
-  - /api/v1.0/<yyyy-mm-dd>/<yyyy-mm-dd> : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature between two dates<br>
+  - /api/v1.0/yyyy-mm-dd : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a given start date<br>
+  - /api/v1.0/yyyy-mm-dd/yyyy-mm-dd : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature between two dates<br>
 ## Bonus
 + <br>
 + <br>
