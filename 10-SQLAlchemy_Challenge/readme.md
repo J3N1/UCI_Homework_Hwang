@@ -24,6 +24,13 @@
   - /api/v1.0/yyyy-mm-dd : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a given start date<br>
   - /api/v1.0/yyyy-mm-dd/yyyy-mm-dd : shows a JSON list of the minimum temperature, the average temperature, and the maximum temperature between two dates<br>
 ## Bonus
-+ <br>
-+ <br>
-+ <br>
+### Temperature Analysis I
++ Found the average temperature in June and December and used an independent t-test to determine that the two averages are statistically significantly different.<br>
+### Temperature Analysis II
++ Found the minimum, average, and maximum temperatures for a trip between 01-10-17 and 01-20-17<br>
++ Plotted the results into a [bar chart](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/average_temp.png) with the peak-to-peak value as the y error bar<br>
+### Daily Rainfall Average
++ Calculated the rainfall per weather station using the previous year's matching dates<br>
++ Calculated the daily normals(averages for the minimum, average, and maximum temperatures)<br>
++ Created a list of dates for the trip 01-10-18 to 01-20-18 to calculate the daily normals then loaded the results into a Pandas DataFrame<br>
++ Used the daily normals data from the Pandas DataFrame to plot an [area plot](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/10-SQLAlchemy_Challenge/temp_area.png) 
