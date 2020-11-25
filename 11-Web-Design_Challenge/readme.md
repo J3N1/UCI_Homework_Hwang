@@ -7,10 +7,10 @@
     + links to each of the four visualization pages which contains a sidebar that shows the preview images of each of the plot graphs<br>
     + clicking the preview images of each of the plot graphs will take the user to that visualization<br>
   - Visualization Pages<br>
-    + [Max Temperature](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Max-Temperature.html) Visualization<br>
-    + [Humidity](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Humidity.html)<br>
-    + [Cloudiness](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Cloudiness.html)<br>
-    + [Wind Speed](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Wind-Speed.html)<br>
+    + [Max Temperature Visualization](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Max-Temperature.html)<br>
+    + [Humidity Visualization](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Humidity.html)<br>
+    + [Cloudiness Visualization](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Cloudiness.html)<br>
+    + [Wind Speed Visualization](https://github.com/J3N1/UCI_Homework_Hwang/blob/master/11-Web-Design_Challenge/WebVisualizations/Wind-Speed.html)<br>
         - each of the visualization pages contains:
             - a descriptive title and heading tag
             - the plot for the selected comparison
