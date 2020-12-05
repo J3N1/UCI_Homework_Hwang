@@ -83,7 +83,7 @@ def scrape():
         "news_p": news_p,
         "featured_image_url": featured_image_url,
         "mars_facts": mars_facts,
-        "hemisphere_image": hemisphere_image_urls
+        "hemisphere_image_urls": hemisphere_image_urls
     }
 
     browser.quit()
