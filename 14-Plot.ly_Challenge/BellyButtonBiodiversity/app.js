@@ -1,7 +1,7 @@
 //Function for Data Plotting
 function getPlot(id){
     //getting data from the json file
-    d3.json("../../samples.json").then((data)=>{
+    d3.json("data/samples.json").then((data)=>{
         console.log(data);
 
         var wfreq = data.metadata.map(d => d.wfreq)
@@ -38,7 +38,7 @@ function getPlot(id){
         var data = [trace];
 
         //create layout variable to set plots layout
-        var lyout = {
+        var layout = {
             title: "Top 10 OTU",
             yaxis:{
                 tickmode: "linear",
@@ -80,37 +80,30 @@ function getPlot(id){
         Plotly.newPlot("bubble", data1, layout_b);
 
         //The gauge chart
-        var data_g = [{
-            domain: { x: [0,1], y: [0,1]},
+        var data_g = [
+            {
+            domain: { x: [0, 1], y: [0, 1] },
             value: parseFloat(wfreq),
-            title: {text: `Weekly Washing Frequency`},
+            title: { text: `Weekly Washing Frequency` },
             type: "indicator",
             mode: "gauge+number",
-            gauge: {axis: {range: [null, 9]},
-                steps: [
-                    {range: [0,2], color: "yellow"},
-                    {range: [2,4], color: "cyan"},
-                    {range: [4,6], color: "teal"},
-                    {range: [6,8], color: "lime"},
-                    {range: [8,9], color: "green"},
-                ]}
-        }];
-        //layout for gauge chart
-        var layout_g = {
-            width: 700,
-            height: 600,
-            margin: {t: 20, b: 40, 1:100, r:100}
-        };
-
-        //create gauge chart
-        Plotly.newPlot("gauge", data_g, layout_g);
-    });
-};
+            gauge: { axis: { range: [null, 9] },
+                    }
+            }
+          ];
+          var layout_g = { 
+              width: 700, 
+              height: 600, 
+              margin: { t: 20, b: 40, l:100, r:100 } 
+            };
+          Plotly.newPlot("gauge", data_g, layout_g);
+        });
+    }  
 
 //function to get the necessary data
 function getInfo(id){
     //read the json file to get the data
-    d3.json("../../samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
         
         //get the metadata info for the demographic panel
         var metadata = data.metadata;
@@ -123,7 +116,7 @@ function getInfo(id){
         var demographicInfo = d3.select("#sample-metadata");
 
         //empty the demographic info panel each time before getting new id info
-        demographicInfo.hmtl("");
+        demographicInfo.html("");
 
         //grab the necessary demographic data for the id and append the info to the panel
         Object.entries(result).forEach((key) => {
@@ -132,3 +125,30 @@ function getInfo(id){
     });
 }
 
+//create the function for the change event
+function optionChanged(id){
+    getPlot(id);
+    getInfo(id);
+}
+
+//function for the initial data rendering
+function init(){
+    //select dropdown menu
+    var dropdown = d3.select("#selDataset");
+
+    //read data
+    d3.json("data/samples.json").then((data) => {
+        console.log(data);
+
+        //get the id data to the dropdown 
+        data.names.forEach(function(name){
+            dropdown.append("option").text(name).property("value");
+        });
+
+        //call the functions to display the data and plots to the page
+        getPlot(data.names[0]);
+        getInfo(data.names[0]);
+    });
+}
+
+init();
