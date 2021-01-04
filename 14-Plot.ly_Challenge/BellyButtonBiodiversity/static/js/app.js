@@ -78,5 +78,32 @@ function getPlot(id){
 
         //create bubble plot
         Plotly.newPlot("bubble", data1, layout_b);
+
+        //The gauge chart
+        var data_g = [{
+            domain: { x: [0,1], y: [0,1]},
+            value: parseFloat(wfreq),
+            title: {text: `Weekly Washing Frequency`},
+            type: "indicator",
+            mode: "gauge+number",
+            gauge: {axis: {range: [null, 9]},
+                steps: [
+                    {range: [0,2], color: "yellow"},
+                    {range: [2,4], color: "cyan"},
+                    {range: [4,6], color: "teal"},
+                    {range: [6,8], color: "lime"},
+                    {range: [8,9], color: "green"},
+                ]}
+        }];
+        //layout for gauge chart
+        var layout_g = {
+            width: 700,
+            height: 600,
+            margin: {t: 20, b: 40, 1:100, r:100}
+        };
+
+        //create gauge chart
+        Plotly.newPlot("gauge", data_g, layout_g);
     });
 };
+
