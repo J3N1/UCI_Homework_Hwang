@@ -45,4 +45,24 @@ d3.csv("data/data.csv").then(function(healthData) {
         .call(bottomAxis);
     chartGroup.append("g")
         .call(leftAxis);
+    //Step 5: Create Circles
+    var circlesGroup = chartGroup.selectAll("circle")
+        .data(healthData)
+        .enter()
+        .append("circle")
+        .attr("cx", d => xLinearScale(d.poverty))
+        .attr("cy", d => yLinearScale(d.healthcare))
+        .attr("r", "15")
+        .attr("fill", "lightblue")
+        .attr("opacity", ".5");
+    //State abbreviations
+    chartGroup.selectAll("text")
+        .data(healthData)
+        .enter()
+        .append("text")
+        .attr("x", (d,i) => xLinearScale(d.poverty))
+        .attr("y", d=> (yScale(d.healthcare-0.28)))
+        .attr("fill", "white")
+        .text(d => d.abbr);
+    //Create Axes Labels
 })
