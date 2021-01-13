@@ -29,5 +29,20 @@ d3.csv("data/data.csv").then(function(healthData) {
         data.healthcare = +data.healthcare;
     });
     //Step 2: Create Scale Functions
+    var xLinearScale = d3.scaleLinear()
+        .domain([20, d3.max(healthData, d => d.poverty)])
+        .range([0, width]);
     
+    var yLinearScale = d3.scaleLinear()
+        .domain([0, d3.max(healthData, d => d.healthcare)])
+        .range([height, 0]);
+    //Step 3: Create axis functions
+    var bottomAxis = d3.axisBottom(xLinearScale);
+    var leftAxis = d3.axisLeft(yLinearScale);
+    //Step 4: Append Axes to the chart
+    chartGroup.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(bottomAxis);
+    chartGroup.append("g")
+        .call(leftAxis);
 })
